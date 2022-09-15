@@ -1,14 +1,16 @@
+#Пример вызова программы
 from PaginationHelper import PaginationHelper
 
-helper = PaginationHelper(['a','b','c','d','e','f'], 4)
-print(helper.page_count()) # should == 2
-print(helper.item_count()) # should == 6
-print(helper.page_item_count(0))  # should == 4
-print(helper.page_item_count(1)) # last page - should == 2
-print(helper.page_item_count(2)) # should == -1 since the page is invalid
+print('Введите текст и число символов на странице: ')
+text = input()
+n = input()
+helper = PaginationHelper(text, n)
+print('Кол-во страниц, необходимое для размещения заданного кол-ва слов, равно {}'.format(helper.page_count()))
+print('Всего слов: {}'.format(helper.item_count()))
+print('Введите номер страницы для определения кол-ва слов на ней: ')
+p_n = int(input())
+print('Кол-во слов на странице {0} равно {1}'.format(p_n, helper.page_item_count(p_n)))
+print('Введите номер слова для поиска страницы, на котором оно находится: ')
+w_n = int(input()) - 1
+print('Слово \'{0}\' находится на странице №{1}'.format(helper.mas[w_n], helper.page_index(w_n)))
 
-# page_index takes an item index and returns the page that it belongs on
-print(helper.page_index(5)) # should == 1 (zero based index)
-print(helper.page_index(2)) # should == 0
-print(helper.page_index(20)) # should == -1
-print(helper.page_index(-10)) # should == -1 because negative indexes are invalid
