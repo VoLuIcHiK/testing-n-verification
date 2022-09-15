@@ -11,7 +11,7 @@
 #### Краткий обзор
 
 Пример работы программы:
-![alt image]([/Users/macbook/Desktop/ТВПО/test.png](https://github.com/VoLuIcHiK/testing-n-verification/blob/master/test.png))
+![alt image](https://github.com/VoLuIcHiK/testing-n-verification/blob/master/test.png)
 
     
 ### Общее описание
